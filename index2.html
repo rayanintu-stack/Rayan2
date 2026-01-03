@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <title>دانشگاه بین‌المللی رایان</title>
+
+    <link rel="icon" type="image/jpeg" href="logo.jpg" />
+    <link rel="apple-touch-icon" href="logo.jpg" />
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Splash Screen -->
+    <div class="splash" id="splash" aria-label="Welcome Screen">
+        <div class="splash-card">
+            <div class="splash-badge">
+                <i class="fas fa-university"></i>
+                <span>خوش آمدید</span>
+            </div>
+            <div class="splash-title">به دانشگاه بین‌المللی رایان خوش آمدید</div>
+            <div class="splash-sub">در حال آماده‌سازی وب‌سایت...</div>
+            <div class="splash-loader" aria-hidden="true"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.jpeg" alt="لوگو دانشگاه رایان" />
+                </div>
+                <div class="logo-text">
+                    <span class="logo-text-main" data-i18n="siteNameFa">دانشگاه بین‌المللی رایان</span>
+                    <span class="logo-text-sub" data-i18n="siteNameEn">Rayan International University</span>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <div class="lang-switch" aria-label="Language Switcher">
+                    <button type="button" class="lang-btn active" data-lang="fa">FA</button>
+                    <button type="button" class="lang-btn" data-lang="ps">PS</button>
+                    <button type="button" class="lang-btn" data-lang="en">EN</button>
+                </div>
+
+                <a href="#contact" class="contact-btn" data-i18n="navContact"><i class="fas fa-phone"></i>  با ما</a>
+                <a href="#registration" data-i18n="navRegistration"><i class="fas fa-user-plus"></i> ثبت‌نام</a>
+
+                <div class="dropdown">
+                    <a class="has-list" href="#faculties" aria-haspopup="true" aria-expanded="false" data-i18n="navFaculties" title="دارای فهرست">
+                        <i class="fas fa-university"></i>
+                        دانشکده‌ها
+                        <span class="list-badge" data-i18n="hasListBadge">فهرست</span>
+                        <i class="fas fa-chevron-down" style="font-size:0.65rem; opacity:0.9;"></i>
+                    </a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="#faculties"><i class="fas fa-gavel"></i> <span data-i18n="facLaw">حقوق و علوم سیاسی</span></a>
+                        <a href="#faculties"><i class="fas fa-laptop-code"></i> <span data-i18n="facCS">کمپیوتر ساینس</span></a>
+                        <a href="#faculties"><i class="fas fa-chalkboard-teacher"></i> <span data-i18n="facEdu">تعلیم و تربیت</span></a>
+                        <a href="#faculties"><i class="fas fa-book"></i> <span data-i18n="facPhilosophy">فلسفه و علوم اسلامی</span></a>
+                        <a href="#faculties"><i class="fas fa-users"></i> <span data-i18n="facSocial">علوم اجتماعی</span></a>
+                        <a href="#faculties"><i class="fas fa-female"></i> <span data-i18n="facWomen">مطالعات زنان</span></a>
+                        <a href="#faculties"><i class="fas fa-quran"></i> <span data-i18n="facSharia">شرعیات</span></a>
+                        <a href="#faculties"><i class="fas fa-chart-line"></i> <span data-i18n="facEconomy">اقتصاد</span></a>
+                        <a href="#faculties"><i class="fas fa-language"></i> <span data-i18n="facLang">زبان و ادبیات</span></a>
+                        <a href="#faculties"><i class="fas fa-newspaper"></i> <span data-i18n="facJournalism">ژورنالیزم</span></a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="has-list" href="#org-chart" aria-haspopup="true" aria-expanded="false" data-i18n="navOrg" title="دارای فهرست">
+                        <i class="fas fa-sitemap"></i>
+                        تشکیلات دانشگاه
+                        <span class="list-badge" data-i18n="hasListBadge">فهرست</span>
+                        <i class="fas fa-chevron-down" style="font-size:0.65rem; opacity:0.9;"></i>
+                    </a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="#org-chart"><i class="fas fa-user-tie"></i> <span data-i18n="orgPresident">رئیس و معاونین</span></a>
+                        <a href="#board-members"><i class="fas fa-users"></i> <span data-i18n="orgBoard">هیأت امنا</span></a>
+                        <a href="#faculty-heads"><i class="fas fa-graduation-cap"></i> <span data-i18n="orgHeads">رؤسای دانشکده‌ها</span></a>
+                    </div>
+                </div>
+
+                <a href="#about" data-i18n="navAbout"><i class="fas fa-info-circle"></i> درباره ما</a>
+                <a href="#home" data-i18n="navHome"><i class="fas fa-home"></i> صفحه اصلی</a>
+            </nav>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <div class="mobile-nav-links">
+            <div class="mobile-dropdown-title" data-i18n="mobileLang">زبان</div>
+            <div class="mobile-dropdown-items" style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <button type="button" class="lang-btn active" data-lang="fa" style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.12);">FA</button>
+                <button type="button" class="lang-btn" data-lang="ps" style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.12);">PS</button>
+                <button type="button" class="lang-btn" data-lang="en" style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.12);">EN</button>
+            </div>
+
+            <a href="#home" onclick="toggleMobileMenu()" data-i18n="navHome"><i class="fas fa-home"></i> صفحه اصلی</a>
+            <a href="#about" onclick="toggleMobileMenu()" data-i18n="navAbout"><i class="fas fa-info-circle"></i> درباره ما</a>
+
+            <div class="mobile-accordion" id="mobOrg">
+                <button class="mobile-accordion-btn" type="button" aria-expanded="false" aria-controls="mobOrgPanel">
+                    <span class="left"><i class="fas fa-sitemap"></i> <span data-i18n="navOrg">تشکیلات دانشگاه</span></span>
+                    <i class="fas fa-chevron-down chev"></i>
+                </button>
+                <div class="mobile-accordion-panel" id="mobOrgPanel">
+                    <a href="#org-chart" onclick="toggleMobileMenu()"><i class="fas fa-user-tie"></i> <span data-i18n="orgPresident">رئیس و معاونین</span></a>
+                    <a href="#board-members" onclick="toggleMobileMenu()"><i class="fas fa-users"></i> <span data-i18n="orgBoard">هیأت امنا</span></a>
+                    <a href="#faculty-heads" onclick="toggleMobileMenu()"><i class="fas fa-graduation-cap"></i> <span data-i18n="orgHeads">رؤسای دانشکده‌ها</span></a>
+                </div>
+            </div>
+
+            <div class="mobile-accordion" id="mobFac">
+                <button class="mobile-accordion-btn" type="button" aria-expanded="false" aria-controls="mobFacPanel">
+                    <span class="left"><i class="fas fa-university"></i> <span data-i18n="navFaculties">دانشکده‌ها</span></span>
+                    <i class="fas fa-chevron-down chev"></i>
+                </button>
+                <div class="mobile-accordion-panel" id="mobFacPanel">
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-gavel"></i> <span data-i18n="facLaw">حقوق و علوم سیاسی</span></a>
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-laptop-code"></i> <span data-i18n="facCS">کمپیوتر ساینس</span></a>
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-chalkboard-teacher"></i> <span data-i18n="facEdu">تعلیم و تربیت</span></a>
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-book"></i> <span data-i18n="facPhilosophy">فلسفه و علوم اسلامی</span></a>
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-users"></i> <span data-i18n="facSocial">علوم اجتماعی</span></a>
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-female"></i> <span data-i18n="facWomen">مطالعات زنان</span></a>
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-quran"></i> <span data-i18n="facSharia">شرعیات</span></a>
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-chart-line"></i> <span data-i18n="facEconomy">اقتصاد</span></a>
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-language"></i> <span data-i18n="facLang">زبان و ادبیات</span></a>
+                    <a href="#faculties" onclick="toggleMobileMenu()"><i class="fas fa-newspaper"></i> <span data-i18n="facJournalism">ژورنالیزم</span></a>
+                </div>
+            </div>
+
+            <a href="#registration" onclick="toggleMobileMenu()" data-i18n="navRegistration"><i class="fas fa-user-plus"></i> ثبت‌نام</a>
+            <a href="#contact" onclick="toggleMobileMenu()" data-i18n="navContact"><i class="fas fa-phone"></i> تماس با ما</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-badge">
+            <i class="fas fa-star"></i>
+            <span data-i18n="heroEstablished">تأسیس 1402 - 2023</span>
+        </div>
+
+        <h1 class="hero-title" data-i18n="heroTitle">دانشگاه بین‌المللی رایان</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          آموزشی بی‌مرز، ساختن آینده‌ای روشن، بر پایه‌ی اصالت علمی و ارزش‌های متعالی،  افقی گسترده برای پژوهندگان، اندیشمندان و نخبگانی که آبادانی جامعه و تعالی انسان را می‌سازند.
+        </p>
+        <p class="hero-highlight" data-i18n="heroFreeWomen"><i class="fas fa-gift"></i> ثبت‌نام برای بانوان در مقطع لیسانس کاملاً رایگان</p>
+
+        <div class="hero-buttons">
+            <a href="#registration" class="btn-primary" data-i18n="heroRegister"><i class="fas fa-user-plus"></i> ثبت‌نام کنید</a>
+            <a href="#about" class="btn-outline" data-i18n="heroAbout"><i class="fas fa-info-circle"></i> درباره دانشگاه</a>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">+400</div>
+                <div class="stat-label"><i class="fas fa-chalkboard-teacher"></i> <span data-i18n="statFaculty">کادر علمی</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+2000</div>
+                <div class="stat-label"><i class="fas fa-users"></i> <span data-i18n="statStudents">دانشجو</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10</div>
+                <div class="stat-label"><i class="fas fa-university"></i> <span data-i18n="statFaculties">دانشکده</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+100</div>
+                <div class="stat-label"><i class="fas fa-user-tie"></i> <span data-i18n="statStaff">کادر اداری</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="org-section" id="about">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-badge"><i class="fas fa-info-circle"></i> <span data-i18n="aboutBadge">درباره ما</span></span>
+                <h2 class="section-title" data-i18n="aboutTitle">دانشگاه بین‌المللی رایان</h2>
+                <p class="section-subtitle">RAYAN INTERNATIONAL UNIVERSITY</p>
+            </div>
+
+            <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                <div style="text-align: right;">
+                    <h3 style="font-size: 1.25rem; font-weight: 900; color: var(--accent-blue); margin-bottom: 1rem;" data-i18n="aboutGoalTitle">هدف دانشگاه</h3>
+                    <p style="color: #374151; line-height: 2; text-align: justify;" data-i18n="aboutGoalP1">
+                        دانشگاه بین‌المللی رایان با هدف خدمت‌گذاری به جامعه علمی کشور مصمم است تا مطابق شرایط داخلی کشور و استانداردهای آکادمیک، زمینه آموزش عالی را به‌گونه آنلاین فراهم ساخته و زمینه‌سازی برای تعامل مؤثر اندیشمندان جهان و نخبگان جهان اسلام و نهادهای علمی بین‌المللی فعال در حوزه‌های دانشی مختلف را داشته باشد.
+                    </p>
+                    <p style="color: #374151; line-height: 2; margin-top: 1rem; text-align: justify;" data-i18n="aboutGoalP2">
+                        این دانشگاه با تبعیت از پلان استراتژیک و پالیسی‌های وزارت تحصیلات عالی افغانستان و مراکز علمی و آکادمیک بین المللی با هدف تحولات بنیادین در حوزه دانش و پژوهش، برنامه‌های خود را عیار نموده و تا کنون خدماتی در خور و شایسته‌ای را انجام داده است.
+                    </p>
+                </div>
+
+                <div class="about-image" style="border-radius: 20px; overflow: hidden; height: 350px;">
+                    <img src="janm.jpg" alt="ساختمان دانشگاه" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organization Chart Section -->
+    <section class="org-section" id="org-chart" style="background: linear-gradient(180deg, #f5f9fb 0%, #e8f4f8 100%);">
+        <div class="org-chart-title">
+            <span class="section-badge" style="background: var(--primary-dark);"><i class="fas fa-sitemap"></i></span>
+            <h2 class="section-title" data-i18n="orgTitle">تشکیلات دانشگاه بین‌المللی رایان</h2>
+        </div>
+
+        <div class="president-card">
+            <img src="Ahmad Saadat.jpg" alt="دکتر احمد سعادت" class="member-photo" />
+            <h4>دکتر احمد سعادت</h4>
+            <p style="color: #666;" data-i18n="orgPresidentRole">رئیس دانشگاه</p>
+        </div>
+
+        <div class="team-grid-section">
+            <h3 class="team-grid-title" data-i18n="orgDeputies">معاونین دانشگاه</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="Rahimi.jpeg" alt="دکتر محمدرضا رحیمی" class="member-photo" />
+                    <h5>دکتر محمدرضا رحیمی</h5>
+                    <p data-i18n="dep1">معاون علمی دانشگاه</p>
+                </div>
+                <div class="team-member">
+                    <img src="Arzu Noori.jpeg" alt="انجنیر آرزو نوری" class="member-photo" />
+                    <h5>انجنیر آرزو نوری</h5>
+                    <p data-i18n="dep2">معاون امور محصلان</p>
+                </div>
+                <div class="team-member">
+                    <img src="Safdari.jpeg" alt="استاد صفدری" class="member-photo" />
+                    <h5>استاد صفدری</h5>
+                    <p data-i18n="dep3">معاون اداری دانشگاه</p>
+                </div>
+                <div class="team-member">
+                    <img src="Zahra Noori.jpg" alt="دکتر زهره نوری" class="member-photo" />
+                    <h5>دکتر زهره نوری</h5>
+                    <p data-i18n="dep4">معاون امور مالی</p>
+                </div>
+                <div class="team-member">
+                    <img src="Iqbali.jpg" alt="دکتر محمدطاهر اقبالی" class="member-photo" />
+                    <h5>دکتر محمدطاهر اقبالی</h5>
+                    <p data-i18n="dep5">معاون فرهنگی دانشگاه</p>
+                </div>
+                <div class="team-member">
+                    <img src="Fayeqa Amin.jpeg" alt="استاد فایقه امین" class="member-photo" />
+                    <h5>استاد فایقه امین</h5>
+                    <p data-i18n="dep6">معاون امور بین‌الملل</p>
+                </div>
+                <div class="team-member">
+                    <img src="Asif Maroof.jpg" alt="استاد اصف معروف" class="member-photo" />
+                    <h5>استاد اصف معروف</h5>
+                    <p data-i18n="dep7">معاون پژوهش</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-grid-section" id="board-members">
+            <h3 class="team-grid-title" data-i18n="boardTitle">اعضای هیأت امنای دانشگاه</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="Hamida Allah Mofid.jpg" alt="دکتر حمیدالله مفید" class="member-photo" />
+                    <h5>دکتر حمیدالله مفید</h5>
+                    <p data-i18n="board1">رئیس هیأت امنا</p>
+                </div>
+                <div class="team-member">
+                    <img src="Parvad Shahian.jpg" alt="پروفیسور پورد شاهیان" class="member-photo" />
+                    <h5>پروفیسور پورد شاهیان</h5>
+                    <p data-i18n="board2">عضو هیأت امنا</p>
+                </div>
+                <div class="team-member">
+                    <img src="Gholam Mohammad Fada.jpg" alt="انجنیر غلام محمد فدا" class="member-photo" />
+                    <h5>انجنیر غلام محمد فدا</h5>
+                    <p data-i18n="board3">عضو هیأت امنا دانشگاه</p>
+                </div>
+                <div class="team-member">
+                    <img src="Massoud Bakhtiari.jpg" alt="دکتر مسعود باختری" class="member-photo" />
+                    <h5>دکتر مسعود باختری</h5>
+                    <p data-i18n="board4">عضو هیأت امنا دانشگاه</p>
+                </div>
+                <div class="team-member">
+                    <img src="Leila Abadi.jpg" alt="استاد لیلا عبادی" class="member-photo" />
+                    <h5>استاد لیلا عبادی</h5>
+                    <p data-i18n="board5">عضو هیأت امنا دانشگاه</p>
+                </div>
+                <div class="team-member">
+                    <img src="Abdul Razzaq Luqman.jpg" alt="دکتر عبدالرزاق لقمان" class="member-photo" />
+                    <h5>دکتر عبدالرزاق لقمان</h5>
+                    <p data-i18n="board6">عضو سازمان همکاری اسلامی</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-grid-section" id="faculty-heads">
+            <h3 class="team-grid-title" data-i18n="headsTitle">رؤسای دانشکده‌های دانشگاه</h3>
+            <div class="faculty-heads-grid">
+                <div class="team-member">
+                    <img src="Zabihullah Muradi.jpeg" alt="دکتر ذبیح الله مرادی" class="member-photo" />
+                    <h5>دکتر ذبیح الله مرادی</h5>
+                    <p data-i18n="head1">رئیس دانشکده حقوق و علوم سیاسی</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="faridoon.jpg" alt="انجنیر فریدون کریمی" class="member-photo" />
+                    <h5>انجنیر فریدون کریمی</h5>
+                    <p data-i18n="head5">رئیس دانشکده کمپیوتر ساینس</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="Waheedullah Farqiar.jpeg" alt="قضاوتمل وحیدالله فرقانیار" class="member-photo" />
+                    <h5>قضاوتمل وحیدالله فرقانیار</h5>
+                    <p data-i18n="head3">رئیس دانشکده شرعیات</p>
+                </div>
+                <div class="team-member">
+                    <img src="Rohina Ghiyasi.jpeg" alt="استاد روحینا غیاثی" class="member-photo" />
+                    <h5>استاد روحینا غیاثی</h5>
+                    <p data-i18n="head4">رئیس دانشکده تعلیم و تربیه</p>
+                </div>
+                <div class="team-member">
+                    <img src="Kehgaday.jpg" alt="پروفیسور کهگدای" class="member-photo" />
+                    <h5>پروفیسور کهگدای</h5>
+                    <p data-i18n="head2">رئیس دانشکده ژورنالیزم</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="Muhammad Iqbal Mohammadi.jpeg" alt="استاد محمدجلال محمدی" class="member-photo" />
+                    <h5>استاد محمدجلال محمدی</h5>
+                    <p data-i18n="head6">رئیس دانشکده اقتصاد</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div style="text-align: center;">
+            <span class="section-badge"><i class="fas fa-lightbulb"></i> <span data-i18n="whyBadge">چرا دانشگاه رایان؟</span></span>
+            <h2 class="section-title" data-i18n="whyTitle">مزایای تحصیل در دانشگاه رایان</h2>
+            <p class="section-subtitle" data-i18n="whySub">دانشگاهی که تحصیل در آن فرصتی برای ساختن آینده‌ای بهتر است</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-gift"></i></div>
+                <h3 data-i18n="benefit1Title">فیس رایگان</h3>
+                <p data-i18n="benefit1Text">تحصیل رایگان برای بانوان در مقطع لیسانس</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-globe"></i></div>
+                <h3 data-i18n="benefit2Title">رویکرد بین‌المللی</h3>
+                <p data-i18n="benefit2Text">همکاری با دانشگاه‌های معتبر بین‌المللی و تبادل دانشجو</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-book-open"></i></div>
+                <h3 data-i18n="benefit3Title">برنامه‌های متنوع</h3>
+                <p data-i18n="benefit3Text">10 دانشکده با رشته‌های مختلف در مقاطع لیسانس و ماستری</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-user-graduate"></i></div>
+                <h3 data-i18n="benefit4Title">اساتید برجسته</h3>
+                <p data-i18n="benefit4Text">کادر علمی با مدرک دکتری و ماستری از دانشگاه‌های معتبر جهان</p>
+            </div>
+        </div>
+
+        <div class="stats-blue-section">
+            <h2 class="stats-blue-title" data-i18n="glanceTitle">دانشگاه رایان در یک نگاه</h2>
+            <p class="stats-blue-subtitle" data-i18n="glanceSub">آماری از دستاوردهای دانشگاه بین‌المللی رایان</p>
+
+            <div class="stats-blue-grid">
+                <div class="stat-blue-card">
+                    <div class="stat-blue-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="stat-blue-number">+400</div>
+                    <div class="stat-blue-label" data-i18n="glance1">کادر علمی متخصص</div>
+                </div>
+                <div class="stat-blue-card">
+                    <div class="stat-blue-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="stat-blue-number">+2000</div>
+                    <div class="stat-blue-label" data-i18n="glance2">دانشجوی فعال</div>
+                </div>
+                <div class="stat-blue-card">
+                    <div class="stat-blue-icon"><i class="fas fa-university"></i></div>
+                    <div class="stat-blue-number">10</div>
+                    <div class="stat-blue-label" data-i18n="glance3">دانشکده تخصصی</div>
+                </div>
+                <div class="stat-blue-card">
+                    <div class="stat-blue-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-blue-number">+100</div>
+                    <div class="stat-blue-label" data-i18n="glance4">کادر اداری</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-wrap">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span class="section-badge"><i class="fas fa-images"></i></span>
+                <h2 class="section-title" data-i18n="galleryTitle">گالری تصاویر</h2>
+                <p class="section-subtitle" data-i18n="gallerySub">ده تصویر پشت سر هم با انیمیشن جذاب</p>
+            </div>
+
+            <div class="gallery-stack" aria-label="Gallery Slideshow">
+                <div class="slide active"><img src="khan1.jpeg" alt="گالری 1" /><div class="overlay"></div></div>
+                <div class="slide"><img src="khan.jpeg" alt="گالری 2" /><div class="overlay"></div></div>
+                <div class="slide"><img src="khan2.jpg" alt="گالری 3" /><div class="overlay"></div></div>
+                <div class="slide"><img src="khan3.jpg" alt="گالری 4" /><div class="overlay"></div></div>
+                <div class="slide"><img src="khan4.jpeg" alt="گالری 5" /><div class="overlay"></div></div>
+                <div class="slide"><img src="jan.jpeg" alt="گالری 6" /><div class="overlay"></div></div>
+                <div class="slide"><img src="jan1.jpeg" alt="گالری 7" /><div class="overlay"></div></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&fit=crop" alt="گالری 8" /><div class="overlay"></div></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&fit=crop" alt="گالری 9" /><div class="overlay"></div></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=1600&fit=crop" alt="گالری 10" /><div class="overlay"></div></div>
+            </div>
+
+            <div class="gallery-controls">
+                <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                    <button class="gallery-btn" type="button" id="prevSlide"><i class="fas fa-chevron-right"></i> <span data-i18n="galleryPrev">قبلی</span></button>
+                    <button class="gallery-btn" type="button" id="nextSlide"><span data-i18n="galleryNext">بعدی</span> <i class="fas fa-chevron-left"></i></button>
+                </div>
+                <div class="gallery-dots" id="galleryDots" aria-label="Gallery Dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="vision-mission-section">
+        <div class="vm-grid">
+            <div class="vm-card vision">
+                <h3><i class="fas fa-eye"></i> <span data-i18n="visionTitle">دیدگاه</span></h3>
+                <p data-i18n="visionText">
+                    آموزش و پرورش نسل جوان در محیط علمی و اخلاقی با کیفیت در تمام سطوح برای خدمت به انسانیت و میل به توسعه اجتماعی، اقتصادی و فرهنگی پایدار، حضور فعال در عرصه بین‌المللی، علم و فناوری برای دستیابی به سعادت بشری
+                </p>
+            </div>
+            <div class="vm-card mission">
+                <h3><i class="fas fa-bullseye"></i> <span data-i18n="missionTitle">ماموریت</span></h3>
+                <p data-i18n="missionText">
+                    آموزش افغانستانی‌ها و پژوهش‌های علمی، تولید علم، تکنولوژی، پرورش دانشمندانی خلاق و متعهد که بتوانند، فارغ از تعصبات مذهبی، منطقوی، قومی و زبانی در آبادانی کشور و ارائه خدمات به بشریت نقش داشته باشند
+                </p>
+            </div>
+        </div>
+
+        <div class="vision-2030">
+            <div class="vision-2030-header">
+                <h2 data-i18n="v2030Title">چشم‌انداز تا سال 2030</h2>
+                <i class="fas fa-rocket" style="font-size: 2rem; background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 12px;"></i>
+            </div>
+            <p data-i18n="v2030Text">
+دانشگاه بین‌المللی رایان در افق 2030، به عنوان یکی از دانشگاه‌های نمونه در منطقه و کانونی پیشرو و تأثیرگذار در آموزش عالی مجازی تبدیل شده است که با ارائه آموزش کیفی و بی‌نظیر، دانشجویان و بخصوص بانوان دانش‌بنیان، متخصص و امیدوار را پرورش می‌دهد تا نه تنها آینده شخصی خود، بلکه چهره اجتماعی و اقتصادی افغانستان و منطقه را دگرگون سازند.</p>
+
+            <div class="vision-2030-cards">
+                <div class="v2030-card"><i class="fas fa-award"></i><h4 data-i18n="v2030Card1">دانشگاه نمونه منطقه</h4></div>
+                <div class="v2030-card"><i class="fas fa-globe-asia"></i><h4 data-i18n="v2030Card2">شبکه جهانی علمی</h4></div>
+                <div class="v2030-card"><i class="fas fa-flask"></i><h4 data-i18n="v2030Card3">پژوهش و توسعه</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration-section" id="registration">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="section-badge" style="background: #10b981;"><i class="fas fa-user-plus"></i></span>
+            <h2 class="section-title" data-i18n="regTitle">ثبت‌نام در دانشگاه</h2>
+            <p class="section-subtitle" data-i18n="regSub">روش‌های ثبت‌نام در دانشگاه بین‌المللی رایان</p>
+        </div>
+
+        <div class="registration-info">
+            <div class="registration-steps">
+                <h4><i class="fas fa-file-alt"></i> <span data-i18n="regMethod1Title">روش اول: دریافت فرم دستی</span></h4>
+                <p data-i18n="regMethod1Text">
+                    فرم ثبت‌نام را از کانال تلگرام: @Rayaniuni یا کانال واتساپ: کانال واتساپ دانشگاه دریافت و پس از تکمیل به ایمیل آدرس: saberahaidari.afgwomenedu@gmail.com ارسال نمایید.
+                </p>
+                <p style="margin-top:-0.5rem;">
+                    <a href="https://t.me/Rayaniuni" target="_blank">@Rayaniuni</a>
+                    |
+                    <a href="https://whatsapp.com/channel/0029VbBpVkyKQuJGPR5L3B3m" target="_blank">کانال واتساپ دانشگاه</a>
+                    |
+                    <a href="mailto:saberahaidari.afgwomenedu@gmail.com">saberahaidari.afgwomenedu@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="registration-steps">
+                <h4><i class="fas fa-link"></i> <span data-i18n="regMethod2Title">روش دوم: ثبت‌نام آنلاین از طریق لینک مستقیم</span></h4>
+                <p data-i18n="regMethod2Text">شما می‌توانید از طریق لینک‌های زیر مستقیماً در دانشکده مورد نظر ثبت‌نام نمایید:</p>
+            </div>
+
+            <h3 style="color: var(--accent-blue); margin: 2rem 0 1rem; text-align: right; font-weight:900;">
+                <i class="fas fa-graduation-cap"></i> <span data-i18n="regBachelorLinks">لینک ثبت‌نام مقطع لیسانس</span>
+            </h3>
+
+            <div class="faculty-reg-grid">
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-gavel"></i> دانشکده حقوق و علوم سیاسی</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/mXdevwKNTa5Ek8gY7" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                        <a href="https://forms.gle/ibBfSmRE7dLfNr819" target="_blank" class="masters"><i class="fas fa-external-link-alt"></i> ماستری</a>
+                    </div>
+                </div>
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-laptop-code"></i> دانشکده کمپیوتر ساینس</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/AsWMUHgqubB8xUQNA" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                    </div>
+                </div>
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-chalkboard-teacher"></i> دانشکده تعلیم و تربیت</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/G3p9xHfdjs3YR7x26" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                        <a href="https://forms.gle/muZ5XXKGcpJGA2Ku8" target="_blank" class="masters"><i class="fas fa-external-link-alt"></i> ماستری</a>
+                    </div>
+                </div>
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-book"></i> دانشکده فلسفه و علوم اسلامی</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/WirY2Lr1sqHsjkaf9" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                        <a href="https://forms.gle/HBQaB9PtakLj7T1u5" target="_blank" class="masters"><i class="fas fa-external-link-alt"></i> ماستری</a>
+                    </div>
+                </div>
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-users"></i> دانشکده علوم اجتماعی</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/TvaKgvBWVMFAJQiZ9" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                    </div>
+                </div>
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-female"></i> دانشکده مطالعات زنان</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/mTm2uGca1ZbGChSE8" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                    </div>
+                </div>
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-language"></i> دانشکده زبان و ادبیات</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/6jSAMbXc9EbbzxBQA" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                        <a href="https://forms.gle/DLDc5M7CKz1akv6h8" target="_blank" class="masters"><i class="fas fa-external-link-alt"></i> ماستری</a>
+                    </div>
+                </div>
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-chart-line"></i> دانشکده اقتصاد</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/3QVf5KbqVn74YBZp9" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                        <a href="https://forms.gle/hP6Mu4qcezUdqQex7" target="_blank" class="masters"><i class="fas fa-external-link-alt"></i> ماستری</a>
+                    </div>
+                </div>
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-quran"></i> دانشکده شرعیات</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/o22mrFxGTRvtmQys8" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                        <a href="https://forms.gle/CLvS5GudS6rxoWYdA" target="_blank" class="masters"><i class="fas fa-external-link-alt"></i> ماستری</a>
+                    </div>
+                </div>
+                <div class="faculty-reg-card">
+                    <h5><i class="fas fa-newspaper"></i> دانشکده ژورنالیزم</h5>
+                    <div class="reg-links">
+                        <a href="https://forms.gle/gFMLGFx4Kv47U3gs8" target="_blank"><i class="fas fa-external-link-alt"></i> لیسانس</a>
+                        <a href="https://forms.gle/2GGYWwt9CTidQLah8" target="_blank" class="masters"><i class="fas fa-external-link-alt"></i> ماستری</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculties Section -->
+    <section class="faculties-section" id="faculties">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="section-badge"><i class="fas fa-university"></i></span>
+            <h2 class="section-title" data-i18n="facTitle">دانشکده‌ها و رشته‌های تحصیلی</h2>
+            <p class="section-subtitle" data-i18n="facSub">10 دانشکده با رشته‌های متنوع در مقاطع لیسانس و ماستری</p>
+        </div>
+
+        <div class="faculties-grid">
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h4 data-i18n="f1">دانشکده تعلیم و تربیت</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f1p1">آموزش و پرورش - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-laptop-code"></i></div>
+                <h4 data-i18n="f2">دانشکده کمپیوتر ساینس</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f2p1">سافتویر انجنیری - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-gavel"></i></div>
+                <h4 data-i18n="f3">دانشکده حقوق و علوم سیاسی</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f3p1">حقوق خصوصی - لیسانس و ماستری</span></span>
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f3p2">حقوق جزا - لیسانس و ماستری</span></span>
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f3p3">علوم سیاسی - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-female"></i></div>
+                <h4 data-i18n="f4">دانشکده مطالعات زنان</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f4p1">مطالعات زنان - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-users"></i></div>
+                <h4 data-i18n="f5">دانشکده علوم اجتماعی</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f5p1">روانشناسی - لیسانس و ماستری</span></span>
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f5p2">علوم اجتماعی - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-book"></i></div>
+                <h4 data-i18n="f6">دانشکده فلسفه و علوم اسلامی</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f6p1">فلسفه - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-quran"></i></div>
+                <h4 data-i18n="f7">دانشکده شرعیات</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f7p1">فقه و اصول - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-chart-line"></i></div>
+                <h4 data-i18n="f8">دانشکده اقتصاد</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f8p1">اقتصاد - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-language"></i></div>
+                <h4 data-i18n="f9">دانشکده زبان و ادبیات</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f9p1">زبان و ادبیات فارسی دری - لیسانس و ماستری</span></span>
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f9p2">زبان انگلیسی - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-icon"><i class="fas fa-newspaper"></i></div>
+                <h4 data-i18n="f10">دانشکده ژورنالیزم</h4>
+                <div class="faculty-programs">
+                    <span class="faculty-program"><i class="fas fa-circle"></i> <span data-i18n="f10p1">ژورنالیزم - لیسانس و ماستری</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2 data-i18n="ctaTitle">آماده شروع سفر علمی خود هستید؟</h2>
+        <p data-i18n="ctaP1">به جمع 2000 دانشجو و 400 کادر علمی متخصص دانشگاه بین‌المللی رایان بپیوندید</p>
+        <p class="cta-highlight" data-i18n="ctaWomen">ویژه بانوان: ثبت‌نام در مقطع لیسانس کاملاً رایگان</p>
+
+        <div class="cta-buttons">
+            <a href="#contact" class="btn-primary" style="background: white; color: var(--primary-dark);" data-i18n="navContact">تماس با ما</a>
+            <a href="#registration" class="btn-outline" style="border-color: white; color: rgb(0, 0, 0);" data-i18n="heroRegister"><i class="fas fa-user-plus"></i> ثبت‌نام کنید</a>
+        </div>
+
+        <div class="cta-features">
+            <span class="cta-feature"><i class="fas fa-check-circle"></i> <span data-i18n="ctaF1">اساتید برجسته</span></span>
+            <span class="cta-feature"><i class="fas fa-check-circle"></i> <span data-i18n="ctaF2">مدرک معتبر</span></span>
+            <span class="cta-feature"><i class="fas fa-check-circle"></i> <span data-i18n="ctaF3">آموزش آنلاین</span></span>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 class="section-title" data-i18n="contactTitle">تماس با ما</h2>
+            <p class="section-subtitle" data-i18n="contactSub">برای اطلاعات بیشتر، ثبت‌نام یا هرگونه سؤال، با ما در تماس باشید</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h4 data-i18n="contactAddressTitle">آدرس دانشگاه</h4>
+                        <p data-i18n="contactAddressValue">افغانستان، کابل</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <h4 data-i18n="contactPhoneTitle">شماره تماس</h4>
+                        <a href="tel:+989126526152" dir="ltr">+98 912 652 6152</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <h4 data-i18n="contactEmailTitle">ایمیل</h4>
+                        <a href="mailto:saberahaidari.afgwomenedu@gmail.com">saberahaidari.afgwomenedu@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-share-alt"></i></div>
+                    <div>
+                        <h4 data-i18n="contactSocialTitle">شبکه‌های اجتماعی</h4>
+                        <div class="social-links">
+                            <a href="https://t.me/Rayaniuni" target="_blank" class="social-link"><i class="fab fa-telegram"></i> <span data-i18n="socialTelegram">کانال تلگرام</span></a>
+                            <a href="https://whatsapp.com/channel/0029VbBpVkyKQuJGPR5L3B3m" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i> <span data-i18n="socialWhatsApp">کانال واتساپ</span></a>
+                            <a href="https://www.facebook.com/profile.php?id=61584520448272" target="_blank" class="social-link"><i class="fab fa-facebook"></i> <span data-i18n="socialFacebook">صفحه فیسبوک</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="women-banner">
+                    <h4 data-i18n="womenBannerTitle">ثبت‌نام رایگان برای بانوان</h4>
+                    <p data-i18n="womenBannerText">ثبت‌نام برای بانوان در مقطع لیسانس کاملاً رایگان می‌باشد</p>
+                    <button onclick="location.href='#registration'" data-i18n="womenBannerBtn">ثبت‌نام کنید</button>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 data-i18n="formTitle">پیام خود را ارسال کنید</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label><span>*</span> <span data-i18n="formName">نام و نام خانوادگی</span></label>
+                        <input type="text" id="fullName" placeholder="نام کامل خود را وارد کنید" required />
+                    </div>
+                    <div class="form-group">
+                        <label><span>*</span> <span data-i18n="formEmail">ایمیل</span></label>
+                        <input type="email" id="email" placeholder="example@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="formPhone">شماره تماس</label>
+                        <input type="tel" id="phone" placeholder="+93 XXX XXX XXX" />
+                    </div>
+                    <div class="form-group">
+                        <label><span>*</span> <span data-i18n="formSubject">موضوع</span></label>
+                        <input type="text" id="subject" placeholder="موضوع پیام خود را بنویسید" required />
+                    </div>
+                    <div class="form-group">
+                        <label><span>*</span> <span data-i18n="formMessage">پیام</span></label>
+                        <textarea id="message" placeholder="پیام خود را اینجا بنویسید..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="formSubmit">ارسال پیام از طریق واتساپ</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="logo.jpeg" alt="لوگو دانشگاه رایان" />
+                </div>
+                <p data-i18n="footerAbout">دانشگاه بین‌المللی رایان با رویکرد اسلامی و علمی به پرورش نسلی از دانشمندان و محققان مسئولیت‌پذیر می‌پردازد</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61584520448272" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://t.me/Rayaniuni" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://whatsapp.com/channel/0029VbBpVkyKQuJGPR5L3B3m" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:saberahaidari.afgwomenedu@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4 data-i18n="footerQuick">لینک‌های سریع</h4>
+                <ul>
+                    <li><a href="#home" data-i18n="navHome">صفحه اصلی</a></li>
+                    <li><a href="#about" data-i18n="navAbout">درباره ما</a></li>
+                    <li><a href="#org-chart" data-i18n="navOrg">تشکیلات دانشگاه</a></li>
+                    <li><a href="#faculties" data-i18n="navFaculties">دانشکده‌ها</a></li>
+                    <li><a href="#registration" data-i18n="navRegistration">ثبت‌نام</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 data-i18n="footerSelected">دانشکده‌های منتخب</h4>
+                <ul>
+                    <li><a href="#faculties" data-i18n="facLaw">حقوق و علوم سیاسی</a></li>
+                    <li><a href="#faculties" data-i18n="facCS">کمپیوتر ساینس</a></li>
+                    <li><a href="#faculties" data-i18n="facEdu">تعلیم و تربیت</a></li>
+                    <li><a href="#faculties" data-i18n="facSocial">علوم اجتماعی</a></li>
+                    <li><a href="#faculties" data-i18n="facJournalism">ژورنالیزم</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 data-i18n="footerContact">تماس با ما</h4>
+                <div class="footer-contact-item">
+                    <span data-i18n="contactAddressValue">افغانستان، کابل</span>
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="footer-contact-item">
+                    <span dir="ltr">+98 912 652 6152</span>
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="footer-contact-item">
+                    <a href="https://t.me/Rayaniuni" target="_blank" style="color: rgba(255,255,255,0.75);" data-i18n="socialTelegram">کانال تلگرام</a>
+                    <i class="fab fa-telegram"></i>
+                </div>
+                <div class="footer-contact-item">
+                    <a href="https://whatsapp.com/channel/0029VbBpVkyKQuJGPR5L3B3m" target="_blank" style="color: rgba(255,255,255,0.75);" data-i18n="socialWhatsApp">کانال واتساپ</a>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-i18n="footerMadeBy">ساخته شده توسط: انجنیر فریدون کریمی ریس دانشکده کمپیوتر ساینس</p>
+            <div>
+                <a href="#" data-i18n="footerRules">قوانین و مقررات</a>
+                <span style="margin: 0 0.5rem;">|</span>
+                <a href="#" data-i18n="footerPrivacy">نشر حفظ این ویب سایت برای دانشگاه است کسی حق نشر ندارد</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/989126526152" class="whatsapp-btn" target="_blank" title="تماس با ما در واتساپ" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Splash 5s
+        (function splashInit(){
+            document.body.classList.add('no-scroll');
+            const splash = document.getElementById('splash');
+            window.setTimeout(() => {
+                splash.classList.add('splash-hide');
+                window.setTimeout(() => {
+                    splash.style.display = 'none';
+                    document.body.classList.remove('no-scroll');
+                }, 520);
+            }, 5000);
+        })();
+
+        // Force light mode by default
+        document.documentElement.classList.remove('dark');
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const isOpen = mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.classList.toggle('no-scroll', isOpen);
+        }
+
+        // Mobile accordions
+        function initMobileAccordions(){
+            const items = document.querySelectorAll('.mobile-accordion');
+            items.forEach(acc => {
+                const btn = acc.querySelector('.mobile-accordion-btn');
+                const panel = acc.querySelector('.mobile-accordion-panel');
+                if (!btn || !panel) return;
+
+                btn.addEventListener('click', () => {
+                    const isOpen = acc.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', String(isOpen));
+                });
+            });
+        }
+        initMobileAccordions();
+
+        // Contact form - Send via WhatsApp
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const header = (window.__lang === 'en')
+                ? "Hello, new message from Rayan University website:"
+                : (window.__lang === 'ps')
+                    ? "سلام، د رایان پوهنتون د وېب‌سایټ نوې پیغام:"
+                    : "سلام، پیام جدید از وبسایت دانشگاه رایان:";
+
+            const whatsappMessage = `${header}
+
+📛 ${window.__lang === 'en' ? 'Name' : (window.__lang === 'ps' ? 'نوم' : 'نام')}: ${name}
+📧 ${window.__lang === 'en' ? 'Email' : (window.__lang === 'ps' ? 'ایمیل' : 'ایمیل')}: ${email}
+📱 ${window.__lang === 'en' ? 'Phone' : (window.__lang === 'ps' ? 'شمېره' : 'شماره تماس')}: ${phone || (window.__lang === 'en' ? 'Not provided' : (window.__lang === 'ps' ? 'نه دی لیکل شوی' : 'ذکر نشده'))}
+📋 ${window.__lang === 'en' ? 'Subject' : (window.__lang === 'ps' ? 'موضوع' : 'موضوع')}: ${subject}
+
+💬 ${window.__lang === 'en' ? 'Message' : (window.__lang === 'ps' ? 'پیغام' : 'پیام')}:
+${message}`;
+
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            window.open(`https://wa.me/989126526152?text=${encodedMessage}`, '_blank');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (!this.getAttribute('href')) return;
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) current = section.getAttribute('id');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.benefit-card, .info-card, .faculty-card, .value-card, .team-member').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(card);
+        });
+
+        // Gallery slider logic
+        (function initGallery(){
+            const slides = Array.from(document.querySelectorAll('.gallery-stack .slide'));
+            const dotsWrap = document.getElementById('galleryDots');
+            const prevBtn = document.getElementById('prevSlide');
+            const nextBtn = document.getElementById('nextSlide');
+            if (!slides.length || !dotsWrap || !prevBtn || !nextBtn) return;
+
+            let index = 0;
+            let timer = null;
+
+            function renderDots(){
+                dotsWrap.innerHTML = '';
+                slides.forEach((_, i) => {
+                    const b = document.createElement('button');
+                    b.className = 'dot' + (i === index ? ' active' : '');
+                    b.type = 'button';
+                    b.setAttribute('aria-label', 'Slide ' + (i+1));
+                    b.addEventListener('click', () => goTo(i, true));
+                    dotsWrap.appendChild(b);
+                });
+            }
+
+            function goTo(i, userAction=false){
+                slides[index].classList.remove('active');
+                index = (i + slides.length) % slides.length;
+                slides[index].classList.add('active');
+                renderDots();
+                if (userAction) restart();
+            }
+
+            function next(){ goTo(index + 1, true); }
+            function prev(){ goTo(index - 1, true); }
+
+            function start(){ timer = setInterval(() => goTo(index + 1), 4200); }
+            function stop(){ if (timer) clearInterval(timer); timer = null; }
+            function restart(){ stop(); start(); }
+
+            nextBtn.addEventListener('click', next);
+            prevBtn.addEventListener('click', prev);
+
+            const stack = document.querySelector('.gallery-stack');
+            stack.addEventListener('mouseenter', stop);
+            stack.addEventListener('mouseleave', start);
+            stack.addEventListener('focusin', stop);
+            stack.addEventListener('focusout', start);
+
+            renderDots();
+            start();
+        })();
+
+        const SITE_VERSION = "2026-01-03-1";
+        console.log("Rayan site version:", SITE_VERSION);
+
+        // Store original HTML text
+        const BASE_TEXT = {};
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            BASE_TEXT[key] = (el.textContent || '').trim();
+        });
+
+        const I18N = {
+            fa: {
+                siteNameFa: "دانشگاه بین‌المللی رایان",
+                siteNameEn: "Rayan International University",
+                hasListBadge: "فهرست",
+
+                navHome: "صفحه اصلی",
+                navAbout: "درباره ما",
+                navOrg: "تشکیلات دانشگاه",
+                navFaculties: "دانشکده‌ها",
+                navRegistration: "ثبت‌نام",
+                navContact: "تماس با ما",
+                mobileLang: "زبان",
+
+                heroEstablished: "تأسیس 1402 - 2023",
+                heroTitle: "دانشگاه بین‌المللی رایان",
+                heroSubtitle: "آموزشی بی‌مرز، ساختن آینده‌ای روشن، بر پایه‌ی اصالت علمی و ارزش‌های متعالی،  افقی گسترده برای پژوهندگان، اندیشمندان و نخبگانی که آبادانی جامعه و تعالی انسان را می‌سازند.",
+                heroFreeWomen: "ثبت‌نام برای بانوان در مقطع لیسانس کاملاً رایگان",
+                heroRegister: "ثبت‌نام کنید",
+                heroAbout: "درباره دانشگاه",
+
+                aboutGoalP1: "دانشگاه بین‌المللی رایان با هدف خدمت‌گذاری به جامعه علمی کشور مصمم است تا مطابق شرایط داخلی کشور و استانداردهای آکادمیک، زمینه آموزش عالی را به‌گونه آنلاین فراهم ساخته و زمینه‌سازی برای تعامل مؤثر اندیشمندان جهان و نخبگان جهان اسلام و نهادهای علمی بین‌المللی فعال در حوزه‌های دانشی مختلف را داشته باشد.",
+                aboutGoalP2: "این دانشگاه با تبعیت از پلان استراتژیک و پالیسی‌های وزارت تحصیلات عالی افغانستان و مراکز علمی و آکادمیک بین المللی با هدف تحولات بنیادین در حوزه دانش و پژوهش، برنامه‌های خود را عیار نموده و تا کنون خدماتی در خور و شایسته‌ای را انجام داده است.",
+
+                statFaculty: "کادر علمی",
+                statStudents: "دانشجو",
+                statFaculties: "دانشکده",
+                statStaff: "کادر اداری",
+
+                aboutBadge: "درباره ما",
+                aboutTitle: "دانشگاه بین‌المللی رایان",
+                aboutGoalTitle: "هدف دانشگاه",
+
+                orgTitle: "تشکیلات دانشگاه بین‌المللی رایان",
+                orgPresident: "رئیس و معاونین",
+                orgBoard: "هیأت امنا",
+                orgHeads: "رؤسای دانشکده‌ها",
+                orgPresidentRole: "رئیس دانشگاه",
+                orgDeputies: "معاونین دانشگاه",
+
+                dep1: "معاون علمی دانشگاه",
+                dep2: "معاون امور محصلان",
+                dep3: "معاون اداری دانشگاه",
+                dep4: "معاون امور مالی",
+                dep5: "معاون فرهنگی دانشگاه",
+                dep6: "معاون امور بین‌الملل",
+                dep7: "معاون پژوهش",
+
+                boardTitle: "اعضای هیأت امنای دانشگاه",
+                board1: "رئیس هیأت امنا",
+                board2: "عضو هیأت امنا",
+                board3: "عضو هیأت امنا دانشگاه",
+                board4: "عضو هیأت امنا دانشگاه",
+                board5: "عضو هیأت امنا دانشگاه",
+                board6: "عضو سازمان همکاری اسلامی",
+
+                headsTitle: "رؤسای دانشکده‌های دانشگاه",
+                head1: "رئیس دانشکده حقوق و علوم سیاسی",
+                head2: "رئیس دانشکده ژورنالیزم",
+                head3: "رئیس دانشکده شرعیات",
+                head4: "رئیس دانشکده تعلیم و تربیه",
+                head5: "رئیس دانشکده کمپیوتر ساینس",
+                head6: "رئیس دانشکده اقتصاد",
+
+                whyBadge: "چرا دانشگاه رایان؟",
+                whyTitle: "مزایای تحصیل در دانشگاه رایان",
+                whySub: "دانشگاهی که تحصیل در آن فرصتی برای ساختن آینده‌ای بهتر است",
+
+                benefit1Title: "فیس رایگان",
+                benefit1Text: "تحصیل رایگان برای بانوان در مقطع لیسانس",
+                benefit2Title: "رویکرد بین‌المللی",
+                benefit2Text: "همکاری با دانشگاه‌های معتبر بین‌المللی و تبادل دانشجو",
+                benefit3Title: "برنامه‌های متنوع",
+                benefit3Text: "10 دانشکده با رشته‌های مختلف در مقاطع لیسانس و ماستری",
+                benefit4Title: "اساتید برجسته",
+                benefit4Text: "کادر علمی با مدرک دکتری و ماستری از دانشگاه‌های معتبر جهان",
+
+                glanceTitle: "دانشگاه رایان در یک نگاه",
+                glanceSub: "آماری از دستاوردهای دانشگاه بین‌المللی رایان",
+                glance1: "کادر علمی متخصص",
+                glance2: "دانشجوی فعال",
+                glance3: "دانشکده تخصصی",
+                glance4: "کادر اداری",
+
+                galleryTitle: "گالری تصاویر",
+                gallerySub: "ده تصویر پشت سر هم با انیمیشن جذاب",
+                galleryPrev: "قبلی",
+                galleryNext: "بعدی",
+
+                visionTitle: "دیدگاه",
+                visionText: "آموزش و پرورش نسل جوان در محیط علمی و اخلاقی با کیفیت در تمام سطوح برای خدمت به انسانیت و میل به توسعه اجتماعی، اقتصادی و فرهنگی پایدار، حضور فعال در عرصه بین‌المللی، علم و فناوری برای دستیابی به سعادت بشری",
+                missionTitle: "ماموریت",
+                missionText: "آموزش افغانستانی‌ها و پژوهش‌های علمی، تولید علم، تکنولوژی، پرورش دانشمندانی خلاق و متعهد که بتوانند، فارغ از تعصبات مذهبی، منطقوی، قومی و زبانی در آبادانی کشور و ارائه خدمات به بشریت نقش داشته باشند",
+                v2030Title: "چشم‌انداز تا سال 2030",
+                v2030Text: "دانشگاه بین‌المللی رایان در افق 2030، به عنوان یکی از دانشگاه‌های نمونه در منطقه و کانونی پیشرو و تأثیرگذار در آموزش عالی مجازی تبدیل شده است که با ارائه آموزش کیفی و بی‌نظیر، دانشجویان و بخصوص بانوان دانش‌بنیان، متخصص و امیدوار را پرورش می‌دهد تا نه تنها آینده شخصی خود، بلکه چهره اجتماعی و اقتصادی افغانستان و منطقه را دگرگون سازند.",
+                v2030Card1: "دانشگاه نمونه منطقه",
+                v2030Card2: "شبکه جهانی علمی",
+                v2030Card3: "پژوهش و توسعه",
+
+                regTitle: "ثبت‌نام در دانشگاه",
+                regSub: "روش‌های ثبت‌نام در دانشگاه بین‌المللی رایان",
+                regMethod1Title: "روش اول: دریافت فرم دستی",
+                regMethod2Title: "روش دوم: ثبت‌نام آنلاین از طریق لینک مستقیم",
+                regMethod2Text: "شما می‌توانید از طریق لینک‌های زیر مستقیماً در دانشکده مورد نظر ثبت‌نام نمایید:",
+                regBachelorLinks: "لینک ثبت‌نام مقطع لیسانس",
+
+                facTitle: "دانشکده‌ها و رشته‌های تحصیلی",
+                facSub: "10 دانشکده با رشته‌های متنوع در مقاطع لیسانس و ماستری",
+
+                facLaw: "حقوق و علوم سیاسی",
+                facCS: "کمپیوتر ساینس",
+                facEdu: "تعلیم و تربیت",
+                facPhilosophy: "فلسفه و علوم اسلامی",
+                facSocial: "علوم اجتماعی",
+                facWomen: "مطالعات زنان",
+                facSharia: "شرعیات",
+                facEconomy: "اقتصاد",
+                facLang: "زبان و ادبیات",
+                facJournalism: "ژورنالیزم",
+
+                f1:"دانشکده تعلیم و تربیت", f1p1:"آموزش و پرورش - لیسانس و ماستری",
+                f2:"دانشکده کمپیوتر ساینس", f2p1:"سافتویر انجنیری - لیسانس و ماستری",
+                f3:"دانشکده حقوق و علوم سیاسی", f3p1:"حقوق خصوصی - لیسانس و ماستری", f3p2:"حقوق جزا - لیسانس و ماستری", f3p3:"علوم سیاسی - لیسانس و ماستری",
+                f4:"دانشکده مطالعات زنان", f4p1:"مطالعات زنان - لیسانس و ماستری",
+                f5:"دانشکده علوم اجتماعی", f5p1:"روانشناسی - لیسانس و ماستری", f5p2:"علوم اجتماعی - لیسانس و ماستری",
+                f6:"دانشکده فلسفه و علوم اسلامی", f6p1:"فلسفه - لیسانس و ماستری",
+                f7:"دانشکده شرعیات", f7p1:"فقه و اصول - لیسانس و ماستری",
+                f8:"دانشکده اقتصاد", f8p1:"اقتصاد - لیسانس و ماستری",
+                f9:"دانشکده زبان و ادبیات", f9p1:"زبان و ادبیات فارسی دری - لیسانس و ماستری", f9p2:"زبان انگلیسی - لیسانس و ماستری",
+                f10:"دانشکده ژورنالیزم", f10p1:"ژورنالیزم - لیسانس و ماستری",
+
+                ctaTitle:"آماده شروع سفر علمی خود هستید؟",
+                ctaP1:"به جمع 2000 دانشجو و 400 کادر علمی متخصص دانشگاه بین‌المللی رایان بپیوندید",
+                ctaWomen:"ویژه بانوان: ثبت‌نام در مقطع لیسانس کاملاً رایگان",
+                ctaF1:"اساتید برجسته", ctaF2:"مدرک معتبر", ctaF3:"آموزش آنلاین",
+
+                contactTitle:"تماس با ما",
+                contactSub:"برای اطلاعات بیشتر، ثبت‌نام یا هرگونه سؤال، با ما در تماس باشید",
+                contactAddressTitle:"آدرس دانشگاه",
+                contactAddressValue:"افغانستان، کابل",
+                contactPhoneTitle:"شماره تماس",
+                contactEmailTitle:"ایمیل",
+                contactSocialTitle:"شبکه‌های اجتماعی",
+                socialTelegram:"کانال تلگرام",
+                socialWhatsApp:"کانال واتساپ",
+                socialFacebook:"صفحه فیسبوک",
+
+                womenBannerTitle:"ثبت‌نام رایگان برای بانوان",
+                womenBannerText:"ثبت‌نام برای بانوان در مقطع لیسانس کاملاً رایگان می‌باشد",
+                womenBannerBtn:"ثبت‌نام کنید",
+
+                formTitle:"پیام خود را ارسال کنید",
+                formName:"نام و نام خانوادگی",
+                formEmail:"ایمیل",
+                formPhone:"شماره تماس",
+                formSubject:"موضوع",
+                formMessage:"پیام",
+                formSubmit:"ارسال پیام از طریق واتساپ",
+
+                footerAbout:"دانشگاه بین‌المللی رایان با رویکرد اسلامی و علمی به پرورش نسلی از دانشمندان و محققان مسئولیت‌پذیر می‌پردازد",
+                footerQuick:"لینک‌های سریع",
+                footerSelected:"دانشکده‌های منتخب",
+                footerContact:"تماس با ما",
+                footerMadeBy:"ساخته شده توسط: انجنیر فریدون کریمی ریس دانشکده کمپیوتر ساینس",
+                footerRules:"قوانین و مقررات",
+                footerPrivacy:"حریم خصوصی",
+
+                regMethod1Text: "فرم ثبت‌نام را از کانال تلگرام: @Rayaniuni یا کانال واتساپ: کانال واتساپ دانشگاه دریافت و پس از تکمیل به ایمیل آدرس: saberahaidari.afgwomenedu@gmail.com ارسال نمایید."
+            },
+
+            ps: {
+                siteNameFa: "د رایان نړیوال پوهنتون",
+                siteNameEn: "Rayan International University",
+                hasListBadge: "لست",
+
+                navHome:"کور پاڼه",
+                navAbout:"زموږ په اړه",
+                navOrg:"د پوهنتون تشکیلات",
+                navFaculties:"پوهنځي",
+                navRegistration:"نوم‌لیکنه",
+                navContact:"اړیکه",
+                mobileLang:"ژبه",
+
+                heroEstablished:"تاسیس 1402 - 2023",
+                heroTitle:"د رایان نړیوال پوهنتون",
+                heroSubtitle:"د بی‌حدوده زده کړې، رڼا راتلونکی جوړول، د علمي اصالت او عالي ارزښتونو پر بنسټ، د هغو پوهانو، متفکرینو او نخبگانو لپاره پراخ افق چې د ټولنې آبادي او انسان ارتقا رامینځته کوي.",
+                heroFreeWomen:"د ښځو لپاره د لیسانس په کچه نوم‌لیکنه بشپړه وړیا ده",
+                heroRegister:"نوم‌لیکنه وکړئ",
+                heroAbout:"د پوهنتون په اړه",
+
+                statFaculty:"علمي کادر",
+                statStudents:"محصلین",
+                statFaculties:"پوهنځي",
+                statStaff:"اداري کادر",
+
+                aboutBadge:"زموږ په اړه",
+                aboutTitle:"د رایان نړیوال پوهنتون",
+                aboutGoalTitle:"د پوهنتون موخه",
+
+                aboutGoalP1:"د رایان نړیوال پوهنتون موخه دا ده چې د هېواد علمي ټولنې ته خدمت وکړي او د هېواد د داخلي شرایطو او اکاډمیک معیارونو مطابق د لوړو زده‌کړو آنلاین زمینه برابره کړي، او د نړۍ د پوهانو، د اسلامي نړۍ د نخبگانو او د بېلابېلو علمي برخو نړیوالو اکاډمیکو بنسټونو ترمنځ د اغېزمن تعامل لپاره زمینه‌سازي وکړي.",
+                aboutGoalP2:"دغه پوهنتون د افغانستان د لوړو زده‌کړو وزارت د ستراتیژیک پلان او پالیسیو او همدارنګه د نړیوالو علمي او اکاډمیکو مرکزونو په رڼا کې، د پوهې او څېړنې په برخه کې د بنسټیزو بدلونونو لپاره خپل پروګرامونه تنظیم کړي او تر اوسه یې د پام وړ خدمتونه ترسره کړي دي.",
+
+                orgTitle:"د رایان نړیوال پوهنتون تشکیلات",
+                orgPresident:"رئیس او مرستیالان",
+                orgBoard:"د امانت هیئت",
+                orgHeads:"د پوهنځیو رئیسان",
+                orgPresidentRole:"د پوهنتون رئیس",
+                orgDeputies:"د پوهنتون مرستیالان",
+
+                dep1:"علمي مرستیال",
+                dep2:"د محصلانو چارو مرستیال",
+                dep3:"اداري مرستیال",
+                dep4:"مالي مرستیال",
+                dep5:"فرهنګي مرستیال",
+                dep6:"د نړیوالو چارو مرستیال",
+                dep7:"د څېړنې مرستیال",
+
+                boardTitle:"د پوهنتون د امانت هیئت غړي",
+                board1:"د امانت هیئت رئیس",
+                board2:"د امانت هیئت غړی",
+                board3:"د امانت هیئت غړی",
+                board4:"د امانت هیئت غړی",
+                board5:"د امانت هیئت غړی",
+                board6:"د اسلامي همکاریو سازمان غړی",
+
+                headsTitle:"د پوهنتون د پوهنځیو رئیسان",
+                head1:"د حقوقو او سیاسي علومو پوهنځي رئیس",
+                head2:"د ژورنالیزم پوهنځي رئیس",
+                head3:"د شرعیاتو پوهنځي رئیس",
+                head4:"د ښوونې او روزنې پوهنځي رئیس",
+                head5:"د کمپیوټر ساینس پوهنځي رئیس",
+                head6:"د اقتصاد پوهنځي رئیس",
+
+                whyBadge:"ولې رایان پوهنتون؟",
+                whyTitle:"د رایان پوهنتون د زده‌کړې ګټې",
+                whySub:"هغه پوهنتون چې زده‌کړه پکې د ښه راتلونکي جوړولو فرصت دی",
+
+                benefit1Title:"وړیا فیس",
+                benefit1Text:"د ښځو لپاره د لیسانس په کچه وړیا زده‌کړه",
+                benefit2Title:"نړیواله تګلاره",
+                benefit2Text:"له معتبر نړیوالو پوهنتونونو سره همکاري او د محصل تبادله",
+                benefit3Title:"بېلابېل پروګرامونه",
+                benefit3Text:"۱۰ پوهنځي، په لیسانس او ماستري کچو کې بېلابېلې رشتې",
+                benefit4Title:"ممتاز استادان",
+                benefit4Text:"علمي کادر له معتبر نړیوالو پوهنتونونو څخه د دوکتورا او ماستري سندونو سره",
+
+                glanceTitle:"رایان پوهنتون په لنډه توګه",
+                glanceSub:"د رایان نړیوال پوهنتون د لاسته راوړنو شمېرې",
+                glance1:"مسلکي علمي کادر",
+                glance2:"فعال محصلین",
+                glance3:"تخصصي پوهنځي",
+                glance4:"اداري کادر",
+
+                galleryTitle:"د انځورونو ګالري",
+                gallerySub:"لس انځورونه پرله پسې د ښکلي انیمیشن سره",
+                galleryPrev:"مخکینی",
+                galleryNext:"راتلونکی",
+
+                visionTitle:"لیدلوری",
+                visionText:"د ځوان نسل روزنه په علمي او اخلاقي چاپېریال کې د لوړ کیفیت له مخې په ټولو کچو کې د انسانیت خدمت، د ټولنیز، اقتصادي او کلتوري پایدار پرمختګ هڅونه، په نړیوال ډګر کې فعال حضور، او د علم او ټکنالوژۍ له لارې د بشري سوکالۍ ترلاسه کول.",
+                missionTitle:"ماموریت",
+                missionText:"د افغانانو روزنه او علمي څېړنې، د علم او ټکنالوژۍ تولید، د خلاقو او ژمنو عالمانو روزنه چې د مذهبي، سیمه‌ییزو، قومي او ژبنیو تعصباتو پرته د هېواد په آبادۍ او بشریت ته د خدمت په وړاندې کولو کې رول ولوبوي.",
+                v2030Title:"تر 2030 کال پورې لیدلوری",
+                v2030Text:"د رایان نړیوال پوهنتون په 2030 افق کې د سیمې له نمونې پوهنتونونو څخه او د مجازي لوړو زده‌کړو په برخه کې یو مخکښ او اغېزمن مرکز ګرځي؛ د لوړ کیفیت ځانګړې زده‌کړه وړاندې کوي او محصلین، په ځانګړي ډول ښځې، پوهه‌محور، متخصص او هیله‌من روزي تر څو نه یوازې خپل شخصي راتلونکی، بلکې د افغانستان او سیمې ټولنیز او اقتصادي څېره هم بدله کړي.",
+                v2030Card1:"د سیمې نمونه پوهنتون",
+                v2030Card2:"نړیواله علمي شبکه",
+                v2030Card3:"څېړنه او پراختیا",
+
+                regTitle:"په پوهنتون کې نوم‌لیکنه",
+                regSub:"د رایان نړیوال پوهنتون د نوم‌لیکنې لارې",
+                regMethod1Title:"لومړۍ لار: د فورم لاسنیوی",
+                regMethod2Title:"دوهمه لار: آنلاین نوم‌لیکنه د مستقیم لینک له لارې",
+                regMethod2Text:"تاسو کولی شئ د لاندې لینکونو له لارې په مستقیم ډول د خپلې خوښې پوهنځي کې نوم‌لیکنه وکړئ:",
+                regBachelorLinks:"د لیسانس نوم‌لیکنې لینکونه",
+
+                facTitle:"پوهنځي او تعلیمي رشتې",
+                facSub:"۱۰ پوهنځي په لیسانس او ماستري کچو کې",
+
+                facLaw:"حقوق او سیاسي علوم",
+                facCS:"کمپیوټر ساینس",
+                facEdu:"ښوونه او روزنه",
+                facPhilosophy:"فلسفه او اسلامي علوم",
+                facSocial:"ټولنیز علوم",
+                facWomen:"د ښځو مطالعات",
+                facSharia:"شرعیات",
+                facEconomy:"اقتصاد",
+                facLang:"ژبه او ادبیات",
+                facJournalism:"ژورنالیزم",
+
+                f1:"د ښوونې او روزنې پوهنځی", f1p1:"ښوونه او روزنه - لیسانس او ماستري",
+                f2:"د کمپیوټر ساینس پوهنځی", f2p1:"سافټویر انجنیري - لیسانس او ماستري",
+                f3:"د حقوقو او سیاسي علومو پوهنځی", f3p1:"خصوصي حقوق - لیسانس او ماستري", f3p2:"جزايي حقوق - لیسانس او ماستري", f3p3:"سیاسي علوم - لیسانس او ماستري",
+                f4:"د ښځو مطالعات پوهنځی", f4p1:"د ښځو مطالعات - لیسانس او ماستري",
+                f5:"د ټولنیزو علومو پوهنځی", f5p1:"ارواپوهنه - لیسانس او ماستري", f5p2:"ټولنیز علوم - لیسانس او ماستري",
+                f6:"د فلسفې او اسلامي علومو پوهنځی", f6p1:"فلسفه - لیسانس او ماستري",
+                f7:"د شرعیاتو پوهنځی", f7p1:"فقه او اصول - لیسانس او ماستري",
+                f8:"د اقتصاد پوهنځی", f8p1:"اقتصاد - لیسانس او ماستري",
+                f9:"د ژبې او ادبیاتو پوهنځی", f9p1:"فارسي/دري ادبیات - لیسانس او ماستري", f9p2:"انګلیسي ژبه - لیسانس او ماستري",
+                f10:"د ژورنالیزم پوهنځی", f10p1:"ژورنالیزم - لیسانس او ماستري",
+
+                ctaTitle:"ایا د خپل علمي سفر پیل ته چمتو یاست؟",
+                ctaP1:"د رایان نړیوال پوهنتون د ۲۰۰۰ محصلینو او ۴۰۰ مسلکي استادانو سره یوځای شئ",
+                ctaWomen:"ځانګړې د ښځو لپاره: د لیسانس نوم‌لیکنه بشپړه وړیا",
+                ctaF1:"ممتاز استادان", ctaF2:"معتبر سند", ctaF3:"آنلاین زده‌کړه",
+
+                contactTitle:"اړیکه",
+                contactSub:"د نورو معلوماتو، نوم‌لیکنې یا پوښتنو لپاره له موږ سره اړیکه ونیسئ",
+                contactAddressTitle:"پته",
+                contactAddressValue:"افغانستان، کابل",
+                contactPhoneTitle:"د تماس شمېره",
+                contactEmailTitle:"ایمیل",
+                contactSocialTitle:"ټولنیزې شبکې",
+                socialTelegram:"د ټیلیګرام چینل",
+                socialWhatsApp:"د واټساپ چینل",
+                socialFacebook:"د فېسبوک پاڼه",
+
+                womenBannerTitle:"د ښځو لپاره وړیا نوم‌لیکنه",
+                womenBannerText:"د ښځو لپاره د لیسانس په کچه نوم‌لیکنه بشپړه وړیا ده",
+                womenBannerBtn:"نوم‌لیکنه وکړئ",
+
+                formTitle:"خپل پیغام واستوئ",
+                formName:"نوم او تخلص",
+                formEmail:"ایمیل",
+                formPhone:"د تماس شمېره",
+                formSubject:"موضوع",
+                formMessage:"پیغام",
+                formSubmit:"پیغام د واټساپ له لارې واستوئ",
+
+                footerAbout:"د رایان نړیوال پوهنتون په اسلامي او علمي تګلاره د مسئول محققانو او پوهانو نسل روزي.",
+                footerQuick:"چټک لینکونه",
+                footerSelected:"ټاکل شوي پوهنځي",
+                footerContact:"اړیکه",
+                footerMadeBy:"جوړونکی: انجنیر فریدون کریمي، د کمپیوټر ساینس پوهنځي رئیس",
+                footerRules:"قوانین",
+                footerPrivacy:"محرمیت",
+
+                regMethod1Text:"د نوم‌لیکنې فورم د ټیلیګرام چینل @Rayaniuni او د پوهنتون د واټساپ چینل څخه ترلاسه کړئ، وروسته له ډکولو یې د لاندې ایمیل پتې ته ولېږئ: saberahaidari.afgwomenedu@gmail.com"
+            },
+
+            en: {
+                siteNameFa: "Rayan International University",
+                siteNameEn: "Rayan International University",
+                hasListBadge: "List",
+
+                navHome:"Home",
+                navAbout:"About",
+                navOrg:"University Structure",
+                navFaculties:"Faculties",
+                navRegistration:"Registration",
+                navContact:"Contact Us",
+                mobileLang:"Language",
+
+                heroEstablished:"Established 1402 - 2023",
+                heroTitle:"Rayan International University",
+                heroSubtitle:"Borderless education, building a bright future, based on scientific authenticity and sublime values, a vast horizon for researchers, thinkers, and distinguished individuals who create the prosperity of society and the advancement of humanity.",
+                heroFreeWomen:"Women’s Bachelor registration is completely free",
+                heroRegister:"Register Now",
+                heroAbout:"About the University",
+
+                statFaculty:"Academic Staff",
+                statStudents:"Students",
+                statFaculties:"Faculties",
+                statStaff:"Administrative Staff",
+
+                aboutBadge:"About",
+                aboutTitle:"Rayan International University",
+                aboutGoalTitle:"University Goal",
+                aboutGoalP1:"Rayan International University is committed to serving the academic community by providing online higher education aligned with domestic conditions and academic standards, and by facilitating effective interaction between global scholars, elites of the Islamic world, and active international academic institutions in various fields of knowledge.",
+                aboutGoalP2:"In line with the strategic plan and policies of Afghanistan’s Ministry of Higher Education and international academic centers, the university has aligned its programs toward fundamental transformations in knowledge and research and has delivered valuable services to date.",
+
+                orgTitle:"Rayan International University Structure",
+                orgPresident:"President & Deputies",
+                orgBoard:"Board of Trustees",
+                orgHeads:"Faculty Heads",
+                orgPresidentRole:"University President",
+                orgDeputies:"University Deputies",
+
+                dep1:"Academic Deputy",
+                dep2:"Student Affairs Deputy",
+                dep3:"Administrative Deputy",
+                dep4:"Financial Deputy",
+                dep5:"Cultural Deputy",
+                dep6:"International Affairs Deputy",
+                dep7:"Research Deputy",
+
+                boardTitle:"Board of Trustees",
+                board1:"Chair of the Board",
+                board2:"Board Member",
+                board3:"Board Member",
+                board4:"Board Member",
+                board5:"Board Member",
+                board6:"OIC Member",
+
+                headsTitle:"Faculty Heads",
+                head1:"Head of Law & Political Science",
+                head2:"Head of Journalism",
+                head3:"Head of Sharia",
+                head4:"Head of Education",
+                head5:"Head of Computer Science",
+                head6:"Head of Economics",
+
+                whyBadge:"Why Rayan University?",
+                whyTitle:"Benefits of Studying at Rayan",
+                whySub:"A university where education is a chance to build a better future",
+
+                benefit1Title:"Free Tuition",
+                benefit1Text:"Free Bachelor tuition for women",
+                benefit2Title:"International Approach",
+                benefit2Text:"Collaboration with reputable international universities and student exchange",
+                benefit3Title:"Diverse Programs",
+                benefit3Text:"10 faculties with programs at Bachelor and Master levels",
+                benefit4Title:"Outstanding Professors",
+                benefit4Text:"Highly qualified academic staff with PhD and Master degrees from top universities",
+
+                glanceTitle:"Rayan at a Glance",
+                glanceSub:"A snapshot of Rayan International University achievements",
+                glance1:"Specialized academic staff",
+                glance2:"Active students",
+                glance3:"Specialized faculties",
+                glance4:"Administrative staff",
+
+                galleryTitle:"Photo Gallery",
+                gallerySub:"10 images in sequence with a smooth animation",
+                galleryPrev:"Previous",
+                galleryNext:"Next",
+
+                visionTitle:"Vision",
+                visionText:"Educating and nurturing young generations in a high-quality scientific and ethical environment at all levels to serve humanity, promote sustainable social, economic, and cultural development, and maintain active presence in the international arena through science and technology to achieve human prosperity.",
+                missionTitle:"Mission",
+                missionText:"Educating Afghans and advancing scientific research, producing knowledge and technology, and nurturing creative and committed scholars who, free from religious, regional, ethnic, and linguistic bias, contribute to rebuilding the country and serving humanity.",
+                v2030Title:"Vision to 2030",
+                v2030Text:"By 2030, Rayan International University will become a model university in the region and a leading, influential hub in virtual higher education, providing exceptional quality learning and nurturing students—especially women—who are knowledge-driven, skilled, and hopeful, transforming not only their personal futures but also the social and economic landscape of Afghanistan and the region.",
+                v2030Card1:"A model university in the region",
+                v2030Card2:"Global academic network",
+                v2030Card3:"Research & Development",
+
+                regTitle:"University Registration",
+                regSub:"Registration methods at Rayan International University",
+                regMethod1Title:"Method 1: Get the form manually",
+                regMethod2Title:"Method 2: Online registration via direct links",
+                regMethod2Text:"You can register directly in your desired faculty through the links below:",
+                regBachelorLinks:"Bachelor Registration Links",
+
+                facTitle:"Faculties & Programs",
+                facSub:"10 faculties with Bachelor and Master programs",
+
+                facLaw:"Law & Political Science",
+                facCS:"Computer Science",
+                facEdu:"Education",
+                facPhilosophy:"Philosophy & Islamic Studies",
+                facSocial:"Social Sciences",
+                facWomen:"Women Studies",
+                facSharia:"Sharia",
+                facEconomy:"Economics",
+                facLang:"Languages & Literature",
+                facJournalism:"Journalism",
+
+                f1:"Faculty of Education", f1p1:"Education - Bachelor & Master",
+                f2:"Faculty of Computer Science", f2p1:"Software Engineering - Bachelor & Master",
+                f3:"Faculty of Law & Political Science", f3p1:"Private Law - Bachelor & Master", f3p2:"Criminal Law - Bachelor & Master", f3p3:"Political Science - Bachelor & Master",
+                f4:"Faculty of Women Studies", f4p1:"Women Studies - Bachelor & Master",
+                f5:"Faculty of Social Sciences", f5p1:"Psychology - Bachelor & Master", f5p2:"Social Sciences - Bachelor & Master",
+                f6:"Faculty of Philosophy & Islamic Studies", f6p1:"Philosophy - Bachelor & Master",
+                f7:"Faculty of Sharia", f7p1:"Fiqh & Principles - Bachelor & Master",
+                f8:"Faculty of Economics", f8p1:"Economics - Bachelor & Master",
+                f9:"Faculty of Languages & Literature", f9p1:"Persian/Dari Literature - Bachelor & Master", f9p2:"English Language - Bachelor & Master",
+                f10:"Faculty of Journalism", f10p1:"Journalism - Bachelor & Master",
+
+                ctaTitle:"Ready to start your academic journey?",
+                ctaP1:"Join 2000 students and 400 specialized academic staff at Rayan International University",
+                ctaWomen:"For women: Bachelor registration is completely free",
+                ctaF1:"Top professors", ctaF2:"Valid certificate", ctaF3:"Online learning",
+
+                contactTitle:"Contact Us",
+                contactSub:"For more information, registration, or any questions, contact us",
+                contactAddressTitle:"Address",
+                contactAddressValue:"Kabul, Afghanistan",
+                contactPhoneTitle:"Phone",
+                contactEmailTitle:"Email",
+                contactSocialTitle:"Social Media",
+                socialTelegram:"Telegram Channel",
+                socialWhatsApp:"WhatsApp Channel",
+                socialFacebook:"Facebook Page",
+
+                womenBannerTitle:"Free registration for women",
+                womenBannerText:"Women’s Bachelor registration is completely free",
+                womenBannerBtn:"Register",
+
+                formTitle:"Send your message",
+                formName:"Full name",
+                formEmail:"Email",
+                formPhone:"Phone",
+                formSubject:"Subject",
+                formMessage:"Message",
+                formSubmit:"Send via WhatsApp",
+
+                footerAbout:"Rayan International University, with an Islamic and academic approach, educates responsible researchers and scholars.",
+                footerQuick:"Quick Links",
+                footerSelected:"Selected Faculties",
+                footerContact:"Contact",
+                footerMadeBy:"Built by: Engineer Fereydoun Karimi, Head of Computer Science Faculty",
+                footerRules:"Terms",
+                footerPrivacy:"Privacy",
+
+                regMethod1Text:"Get the registration form from Telegram @Rayaniuni or the university WhatsApp channel, complete it, and email it to: saberahaidari.afgwomenedu@gmail.com"
+            }
+        };
+
+        function applyLanguage(lang){
+            window.__lang = lang;
+
+            // NEW: set helper class for mobile nav direction
+            document.documentElement.classList.toggle('is-ltr', lang === 'en');
+
+            if (lang === 'en'){
+                document.documentElement.setAttribute('dir','ltr');
+                document.documentElement.setAttribute('lang','en');
+                document.body.style.direction = 'ltr';
+            } else {
+                document.documentElement.setAttribute('dir','rtl');
+                document.documentElement.setAttribute('lang', lang === 'ps' ? 'ps' : 'fa');
+                document.body.style.direction = 'rtl';
+            }
+
+            const dict = I18N[lang] || {};
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (Object.prototype.hasOwnProperty.call(dict, key)) {
+                    el.textContent = dict[key];
+                } else if (Object.prototype.hasOwnProperty.call(BASE_TEXT, key)) {
+                    el.textContent = BASE_TEXT[key];
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(b => {
+                b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+            });
+
+            if (lang === 'en'){
+                document.getElementById('fullName').placeholder = "Enter your full name";
+                document.getElementById('email').placeholder = "example@email.com";
+                document.getElementById('phone').placeholder = "+93 XXX XXX XXX";
+                document.getElementById('subject').placeholder = "Write the subject";
+                document.getElementById('message').placeholder = "Write your message here...";
+                document.querySelectorAll('.form-group input, .form-group textarea').forEach(x => {
+                    x.style.textAlign = 'left';
+                    x.style.direction = 'ltr';
+                });
+                document.querySelectorAll('.form-group label').forEach(x => x.style.textAlign = 'left');
+            } else {
+                document.getElementById('fullName').placeholder = (lang === 'ps') ? "خپل بشپړ نوم وليکئ" : "نام کامل خود را وارد کنید";
+                document.getElementById('email').placeholder = "example@email.com";
+                document.getElementById('phone').placeholder = "+93 XXX XXX XXX";
+                document.getElementById('subject').placeholder = (lang === 'ps') ? "د پیغام موضوع وليکئ" : "موضوع پیام خود را بنویسید";
+                document.getElementById('message').placeholder = (lang === 'ps') ? "خپل پیغام دلته وليکئ..." : "پیام خود را اینجا بنویسید...";
+                document.querySelectorAll('.form-group input, .form-group textarea').forEach(x => {
+                    x.style.textAlign = 'right';
+                    x.style.direction = 'rtl';
+                });
+                document.querySelectorAll('.form-group label').forEach(x => x.style.textAlign = 'right');
+            }
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+        });
+
+        applyLanguage('fa');
+    </script>
+</body>
+</html>
